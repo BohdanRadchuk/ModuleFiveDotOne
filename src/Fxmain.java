@@ -1,6 +1,7 @@
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
@@ -20,16 +21,24 @@ public class Fxmain extends Application {
         Line line = new Line(10, 10, 200, 200);
         Circle[] circle = new Circle[gen.circlearraysize];
         int[] randomeradius = new int[gen.circlearraysize];
+        //CircleGenerator randomColor = new CircleGenerator();
+
         for (int i = 0; i < gen.circlearraysize; i++) {
             randomeradius[i] = gen.Min + (int) (Math.random() * ((gen.Max - gen.Min) + 1));}
 
             for (int i = 0; i < gen.circlearraysize; i++) {
             if (i==0){
-                gen.y = randomeradius[i];}
+                gen.y = randomeradius[i];
+                Circle circle1 = new Circle(randomeradius[i]/2 , randomeradius[i]/2,randomeradius[i]/4, Paint.valueOf("Green"));
+                root.getChildren().addAll(circle1);
+            }
             else {
                 gen.y = gen.y + randomeradius[i] + randomeradius[i-1];
             }
+
             circle[i] = new Circle(gen.x, gen.y, randomeradius[i]);
+            circle[i].setStroke(Paint.valueOf(""));
+            circle[i].setFill (Paint.valueOf("Green"));
                 root.getChildren().addAll(circle[i]);
             }
 
