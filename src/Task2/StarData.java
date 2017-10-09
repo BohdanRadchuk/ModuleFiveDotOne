@@ -24,8 +24,6 @@ public class StarData {
         System.out.println("enter radius of the star");
         this.radius = scanner.nextInt();
         this.smallradius = radius/2.57;
-        double tempx;
-        double tempy;
 
     }
 
@@ -46,7 +44,7 @@ public class StarData {
             }
         }
         double tempx = stardotsx [2];               //swaping points position
-        double tempy = stardotsy [2];
+        double tempy = stardotsy [2];               //p.s. пробовал разные градусы для большого круга. не получилось сделать в правельной очердности
         stardotsx [2] = stardotsx [6];
         stardotsy [2] = stardotsy [6];
 
