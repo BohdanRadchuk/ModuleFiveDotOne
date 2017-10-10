@@ -22,7 +22,7 @@ public class Fxmain extends Application {
         int[] randomeradius = new int[gen.circlearraysize];                                         //creating array with size from keyboard
 
 
-        Random rand = new Random();
+
         int sumofrad = 0;
         for (int i = 0; i < gen.circlearraysize; i++) {
             randomeradius[i] = gen.Min + (int) (Math.random() * ((gen.Max - gen.Min) + 1));         //creating array with random radiuses of our circles
