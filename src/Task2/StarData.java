@@ -15,7 +15,6 @@ public class StarData {
     double [] stardotsx = new double[10];
     double [] stardotsy = new double[10];
 
-
     public StarData() {
         System.out.println("enter x & y of the star center");
         Scanner scanner= new Scanner(System.in);
@@ -24,13 +23,9 @@ public class StarData {
         System.out.println("enter radius of the star");
         this.radius = scanner.nextInt();
         this.smallradius = radius/2.57;
-
     }
 
-
     public void pointsInit(){
-
-
 
         stardotsx [0] =  centerx;
         stardotsy [0] = centery - radius;
@@ -47,7 +42,6 @@ public class StarData {
         double tempy = stardotsy [2];               //p.s. пробовал разные градусы для большого круга. не получилось сделать в правельной очердности
         stardotsx [2] = stardotsx [6];
         stardotsy [2] = stardotsy [6];
-
         double tempx1 = stardotsx [4];
         double tempy1 = stardotsy [4];
         stardotsx [4] = tempx;
@@ -58,10 +52,5 @@ public class StarData {
         stardotsy [8] = tempy1;
         stardotsx [6] = tempx;
         stardotsy [6] = tempy;
-
-
-
-
     }
-
 }
